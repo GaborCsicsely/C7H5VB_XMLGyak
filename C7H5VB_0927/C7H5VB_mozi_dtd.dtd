@@ -1,0 +1,17 @@
+<!DOCTYPE mozi[
+<!ELEMENT mozi (film*) >
+<!ELEMENT film (rendezo+,szinesz+,iro+) >
+<!ATTLIST film mufaj (Horror|Komédia|Akcio) "Horror" > 
+<!ATTLIST film id ID #required>
+
+<!ELEMENT rendezo empty>
+<!ATTLIST rendezo id ID #required>
+<!ATTLIST rendezo nev CDATA #required>
+
+<!ELEMENT szinesz empty>
+<!ATTLIST szinesz id ID #required>
+<!ATTLIST szinesz nev CDATA #required>
+
+<!ELEMENT iro empty>
+<!ATTLIST iro id ID #required>
+]>
