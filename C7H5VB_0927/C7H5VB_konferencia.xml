@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+
+	<cim>Programtervezés</cim>
+	
+	<hallgatók>
+		
+		<hallgató>
+
+			<név>Csicsely Gábor</név>
+			<lakcím>3535 Miskolc, Bogyó utca 9</lakcím>
+			
+		</hallgató>
+
+		<hallgató>
+			
+			<név>Nagy Laura</név>
+			<lakcím>3525 Miskolc, Vas utca 12</lakcím>
+
+		</hallgató>
+
+		<hallgató>
+			
+			<név>Püspöki Boldizsár</név>
+			<lakcím>3534 Miskolc, Vasverő utca 12</lakcím>
+
+		</hallgató>
+		
+	</hallgatók>
+
+	<helyszín>Miskolci Egyetem A1 földszínt I-es előadó</helyszín>
+
+	<előadó>
+
+		<név>Dr. Nagy János</név>
+		<adószám>73894284-2-43</adószám>
+		<lakcím>3512 Miskolc, Sárfi utca 7</lakcím>
+
+	</előadó>
+
+	<dátum>2024.03.19</dátum>
+
+</konferencia>
