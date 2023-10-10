@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT C7H5VB_ertodtd (A+, AB+, B+, C+)>
+
+<!ELEMENT A (a,b,c)>
+<!ATTLIST A a ID #REQUIRED> 
+<!ELEMENT b (x,y)>
+    <!ELEMENT x (#PCDATA)>
+    <!ELEMENT y (#PCDATA)>
+<!ELEMENT c (d,e)>
+    <!ELEMENT d (#PCDATA)>
+    <!ELEMENT e (#PCDATA)>
+<!ELEMENT AB (c)>
+    <!ELEMENT c (#PCDATA)>
+
+
+<!ELEMENT B (a,b)>
+<!ATTLIST B a ID #REQUIRED>
+<!ELEMENT b (x,y)>
+    <!ELEMENT x (#PCDATA)>
+    <!ELEMENT y (#PCDATA)>
+
+<!ELEMENT C (a,b)>
+<!ATTLIST C a ID #REQUIRED>
+<!ELEMENT b (#PCDATA)>
