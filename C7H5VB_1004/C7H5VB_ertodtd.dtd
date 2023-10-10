@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!ELEMENT C7H5VB_ertodtd (A+, AB+, B+, C+)>
+<!ELEMENT C7H5VB_modell (A+, AB+, B+, C+)>
 
 <!ELEMENT A (a,b,c)>
 <!ATTLIST A a ID #REQUIRED> 
