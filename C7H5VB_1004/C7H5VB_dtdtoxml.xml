@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<C7H5VB_modell>
+    <A>
+        <a ID =" "></a>
+        <b>
+            <x></x>
+            <y></y>
+        </b>
+        <c>
+            <d></d>
+            <e></e>
+        </c>   
+    </A>
+
+    <AB>
+        <c></c>
+    </AB>
+
+    <B>
+        <a ID =" "></a>
+        <b>
+            <x></x>
+            <y></y>
+        </b> 
+    </B>
+
+    <C>
+        <a ID =" "></a>
+        <b></b>
+    </C>
+
+</C7H5VB_modell>
