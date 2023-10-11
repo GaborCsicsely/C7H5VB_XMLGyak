@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<c7h5vb_kurzusfelvetel tanev="2023/24_1" egyetem="ME">
+	<hallgato>
+		<hnev>Csicsely Gábor</hnev>
+		<szulev>2002-03-19</szulev>
+		<szak evf="5" >Mérnökinformatika</szak>
+	</hallgato>
+	
+	<kurzusok>
+		<kurzus id="GEIAL332-B" jovahagyas="igen">
+			<kurzusnev>Adatkezelés XML-ben</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In/101</hely>
+			<idopont>Szerda 10-12 óra</idopont>
+			<oktato>Dr. Bednarik László</oktato>
+		</kurzus>
+		
+		<kurzus id="GEIAK120-B" nyelv="angol">
+			<kurzusnev>Integrált Vállalati Rendszerek</kurzusnev>
+			<kredit>5</kredit>
+			<hely>X. A1 II. em 218</hely>
+			<idopont>Szerda 12-16 óra</idopont>
+			<oktato>Dr. Dadvandipour Samad</oktato>
+			<oraado>Dr. Kulcsárné Dr. Forrai Mónika</oraado>
+		</kurzus>
+
+		<kurzus id="GEIAL31H-B">
+			<kurzusnev>Szoftver tesztelés</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In/103</hely>
+			<idopont>Hétfő 10-14 óra</idopont>
+			<oktato>Dr. Hornyák Olivér</oktato>
+		</kurzus>
+
+		<kurzus id="GEIAL331-B">
+			<kurzusnev>Web Technológiák</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In/103</hely>
+			<idopont>Hétfő 14-16 óra</idopont>
+			<oktato>Dr. Agárdi Anita</oktato>
+		</kurzus>
+
+		<kurzus id="GEIAL331-B">
+			<kurzusnev>Mesterséges Inteligencia</kurzusnev>
+			<kredit>5</kredit>
+			<hely>XXXII A1 magasfsz</hely>
+			<idopont>Kedd 10-12 óra</idopont>
+			<oktato>Kunné Dr. Tamás Judit</oktato>
+			<oraado>Fazekas Levente Áron</oraado>
+		</kurzus>
+
+
+		<kurzus id="GEIAK336-B">
+			<kurzusnev>WEB-es alkalmazások C#</kurzusnev>
+			<kredit>5</kredit>
+			<hely>In/101</hely>
+			<idopont>Kedd 14-18 óra</idopont>
+			<oktato>Dr. Árvai László</oktato>
+			<oraado>Dr. Milef Péter</oraado>
+		</kurzus>
+
+	</kurzusok>
+</c7h5vb_kurzusfelvetel>
