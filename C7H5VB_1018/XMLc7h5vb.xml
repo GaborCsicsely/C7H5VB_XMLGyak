@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<fesztival_c7h5vb>
+    <fesztival fesz_ID="1">
+        <nev>VOLT Fesztivál</nev>
+        <helyszin>Sopron</helyszin>
+        <ev>2024-02-02</ev>
+    </fesztival>
+    <fesztival fesz_ID="2">
+        <nev>Hang Fesztivál</nev>
+        <helyszin>Szolnok</helyszin>
+        <ev>2024-09-12</ev>
+    </fesztival>
+
+    <tulajdonos T_ID="1" fesz_ID="1">
+        <nev>Nagy Sándor</nev>
+        <adoszam>12345678-2-22</adoszam>
+        <alapitas>2003-02-02</alapitas>
+        <bevetel>10000000</bevetel>
+    </tulajdonos>
+    <tulajdonos T_ID="2" fesz_ID="2">
+        <nev>Kis Ernő</nev>
+        <adoszam>87654321-3-33</adoszam>
+        <alapitas>2005-09-12</alapitas>
+        <bevetel>5000000</bevetel>
+    </tulajdonos>
+
+    <fellepo FEL_ID="1" fesz_ID="2">
+        <nev>Azariah</nev>
+        <orszag>Magyar</orszag>
+        <dij>10000</dij>
+    </fellepo>
+    <fellepo FEL_ID="2" fesz_ID="1">
+        <nev>Imagine Dragons</nev>
+        <orszag>Amerika</orszag>
+        <dij>1000000</dij>
+    </fellepo>
+
+    <alkalmazott A_ID="1" B_ID="1">
+        <nev>Erős Jenő</nev>
+        <fizetes>15000</fizetes>
+        <muszak>Esti</muszak>
+    </alkalmazott>
+    <alkalmazott A_ID="2" B_ID="2">
+        <nev>Sáros Gergő</nev>
+        <fizetes>12000</fizetes>
+        <muszak>Esti</muszak>
+    </alkalmazott>
+
+    <bar B_ID="1" fesz_ID="1">
+        <nev>Hell Bár</nev>
+        <ceg>Hell</ceg>
+        <ital>Hell</ital>
+        <ital>Xixo</ital>
+    </bar>
+    <bar B_ID="2" fesz_ID="2">
+        <nev>CocaCola Bár</nev>
+        <ceg>CocaCola</ceg>
+        <ital>CocaCola</ital>
+        <ital>Fanta</ital>
+        <ital>Sprite</ital>
+    </bar>
+
+    <kozlemeny K_ID="1" NY_ID="1" R_ID="1">
+        <kerdezo>Bécsi János</kerdezo>
+    </kozlemeny>
+    <kozlemeny K_ID="2" NY_ID="1" R_ID="2">
+        <kerdezo>Asztalos Sándor</kerdezo>
+    </kozlemeny>
+
+    <nyelvtudas NY_ID="1" >
+        <nyelv>Magyar</nyelv>
+        <szint>C2</szint>
+    </nyelvtudas>
+    <nyelvtudas NY_ID="2" >
+        <nyelv>Angol</nyelv>
+        <szint>C1</szint>
+    </nyelvtudas>
+
+    <resztvevo R_ID="1" FESZ_ID="1">
+        <nev>Csicsely Gábor</nev>
+        <diakigazolvany>712754827543</diakigazolvany>
+        <lakcim>
+            <telepules>Miskolc</telepules>
+            <utca>Gőz u.</utca>
+            <hazszam>7</hazszam>
+        </lakcim>
+    </resztvevo>
+    <resztvevo R_ID="2" FESZ_ID="2">
+        <nev>Urbán Olivér</nev>
+        <diakigazolvany>712754827546</diakigazolvany>
+        <lakcim>
+            <telepules>Miskolc</telepules>
+            <utca>Vasverő u.</utca>
+            <hazszam>12</hazszam>
+        </lakcim>
+    </resztvevo>
+
+</fesztival_c7h5vb>
