@@ -42,7 +42,7 @@
         <xs:selector xpath="alkalmazott"/>
         <xs:field xpath="@A_ID"/>
     </xs:key>
-    <xs:keyref name="alkalmazottFesz_ID" refer="barID">
+    <xs:keyref name="alkalmazottB_ID" refer="barID">
         <xs:selector xpath="alkalmazott"/>
         <xs:field xpath="@B_ID"/>
     </xs:keyref>
