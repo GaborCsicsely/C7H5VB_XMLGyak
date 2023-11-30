@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="C7H5VB_Hell">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Gyarak" maxOccurs="unbounded"/>
+				<xs:element ref="Termekek" maxOccurs="unbounded"/>
+				<xs:element ref="Dolgozok" maxOccurs="unbounded"/>
+				<xs:element ref="AvalonPark" maxOccurs="1"/>
+				<xs:element ref="Vezeto" maxOccurs="1"/>
+				<xs:element ref="Kiszallitas" maxOccurs="unbounded"/>
+				<xs:element ref="Megrendelok" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+
+		<xs:key name="GyarAzonosito">
+			<xs:selector xpath="Gyarak"/>
+			<xs:field xpath="@GyarAzonosito"/>
+		</xs:key>
+
+		<xs:key name="VallalatiAzonosito">
+			<xs:selector xpath="Termekek"/>
+			<xs:field xpath="@VallalatiAzonosito"/>
+		</xs:key>
+		<xs:keyref name="GyarakVallalatiAzonosito" refer="VallalatiAzonosito">
+			<xs:selector xpath="Gyarak"/>
+			<xs:field xpath="@VallalatiAzonosito"/>
+		</xs:keyref>
+
+		<xs:key name="ID">
+			<xs:selector xpath="Dolgozok"/>
+			<xs:field xpath="@ID"/>
+		</xs:key>
+		<xs:keyref name="DolgozokGyarAzonosito" refer="GyarAzonosito">
+			<xs:selector xpath="Dolgozok"/>
+			<xs:field xpath="@GyarAzonosito"/>
+		</xs:keyref>
+
+		<xs:key name="Azonosito">
+			<xs:selector xpath="AvalonPark"/>
+			<xs:field xpath="@Azonosito"/>
+		</xs:key>
+		<xs:keyref name="AvalonParkVezID" refer="VezID">
+			<xs:selector xpath="AvalonPark"/>
+			<xs:field xpath="@VezID"/>
+		</xs:keyref>
+
+		<xs:key name="VezID">
+			<xs:selector xpath="Vezeto"/>
+			<xs:field xpath="@VezID"/>
+		</xs:key>
+
+		<xs:keyref name="KiszallitasMegrendeloAzonosito" refer="MegrendeloAzonosito">
+			<xs:selector xpath="Kiszallitas"/>
+			<xs:field xpath="@MegrendeloAzonosito"/>
+		</xs:keyref>
+		
+		<xs:keyref name="KiszallitasGyarAzonosito" refer="GyarAzonosito">
+			<xs:selector xpath="Kiszallitas"/>
+			<xs:field xpath="@GyarAzonosito"/>
+		</xs:keyref>
+
+		<xs:key name="MegrendeloAzonosito">
+			<xs:selector xpath="Megrendelok"/>
+			<xs:field xpath="@MegrendeloAzonosito"/>
+		</xs:key>
+
+	</xs:element>
+
+
+
+	<xs:element name="Gyarak">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Cime" type="GyarakCimeType"/>
+				<xs:element name="GyartasiRata" type="xs:string"/>
+				<xs:element name="Kiadasok" type="penzosszeg"/>
+			</xs:sequence>
+			<xs:attribute name="GyarAzonosito" type="xs:integer"/>
+			<xs:attribute name="VallalatiAzonosito" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Termekek">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fajtaja" type="FajtajaType"/>
+				<xs:element name="Bevetel" type="penzosszeg"/>
+				<xs:element name="Kiadasok" type="TermekekKiadasokType"/>
+			</xs:sequence>
+			<xs:attribute name="VallalatiAzonosito" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Dolgozok">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Lakcim" type="DolgozokLakcimType"/>
+				<xs:element name="Beosztas" type="xs:string"/>
+				<xs:element name="Nev" type="xs:string"/>
+				<xs:element name="Fizetes" type="penzosszeg"/>
+				<xs:element name="Telefonszam" type="xs:string" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:integer"/>
+			<xs:attribute name="GyarAzonosito" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AvalonPark">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Kiadasok" type="AvalonParkKiadasokType"/>
+				<xs:element name="Bevetel" type="penzosszeg"/>
+				<xs:element name="Cime" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="Azonosito" type="xs:integer"/>
+			<xs:attribute name="VezID" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Vezeto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Lakcim" type="DolgozokLakcimType"/>
+				<xs:element name="Nev" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="VezID" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Kiszallitas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Mennyiseg" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="GyarAzonosito" type="xs:integer"/>
+			<xs:attribute name="MegrendeloAzonosito" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Megrendelok">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Elerhetoseg" type="ElerhetosegType"/>
+				<xs:element name="Cime" type="DolgozokLakcimType"/>
+			</xs:sequence>
+			<xs:attribute name="MegrendeloAzonosito" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="GyarakCimeType">
+		<xs:sequence>
+			<xs:element name="UtcaHazszam" type="xs:string"/>
+			<xs:element name="IrSzam" type="xs:string"/>
+			<xs:element name="Varos" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="FajtajaType">
+		<xs:choice>
+			<xs:element name="Xixo" type="xs:string"/>
+			<xs:element name="Hell" type="xs:string"/>
+			<xs:element name="Egyeb" type="xs:string"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="TermekekKiadasokType">
+		<xs:sequence>
+			<xs:element name="Marketing" type="penzosszeg"/>
+			<xs:element name="Otletek" type="penzosszeg"/>
+			<xs:element name="Teszteles" type="penzosszeg"/>
+		</xs:sequence>
+	</xs:complexType> 
+
+	<xs:complexType name="AvalonParkKiadasokType">
+		<xs:sequence>
+			<xs:element name="Marketing" type="penzosszeg"/>
+			<xs:element name="Karbantartas" type="penzosszeg"/>
+			<xs:element name="Merchandiseok" type="penzosszeg"/>
+			<xs:element name="Egyeb" type="penzosszeg"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DolgozokLakcimType">
+		<xs:sequence>
+			<xs:element name="UtcaHazszam" type="xs:string"/>
+			<xs:element name="IrSzam" type="xs:string"/>
+			<xs:element name="Varos" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ElerhetosegType">
+		<xs:sequence>
+			<xs:element name="Email" type="xs:string"/>
+			<xs:element name="TelefonSzam" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="penzosszeg">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+
+</xs:schema>

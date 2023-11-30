@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<C7H5VB_Hell>
+
+	<!--Gyárak-->
+	<Gyarak GyarAzonosito="1" VallalatiAzonosito="1">
+		<Cime>
+			<UtcaHazszam>Vas utca 7</UtcaHazszam>
+			<IrSzam>3534</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Cime>
+		<GyartasiRata>10000</GyartasiRata>
+		<Kiadasok>10000000</Kiadasok>
+	</Gyarak>
+	
+	<Gyarak GyarAzonosito="2" VallalatiAzonosito="2">
+		<Cime>
+			<UtcaHazszam>Gyár utca 1</UtcaHazszam>
+			<IrSzam>3525</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Cime>
+		<GyartasiRata>15000</GyartasiRata>
+		<Kiadasok>13000000</Kiadasok>
+	</Gyarak>
+	
+	<Gyarak GyarAzonosito="3" VallalatiAzonosito="3">
+		<Cime>
+			<UtcaHazszam>Hell utca 1</UtcaHazszam>
+			<IrSzam>2092</IrSzam>
+			<Varos>Budakeszi</Varos>
+		</Cime>
+		<GyartasiRata>35000</GyartasiRata>
+		<Kiadasok>19500000</Kiadasok>
+	</Gyarak>
+
+
+	<!--Termékek-->
+	<Termekek VallalatiAzonosito="1">
+		<Fajtaja>
+			<Xixo>1</Xixo>
+		</Fajtaja>
+		<Bevetel>50000000</Bevetel>
+		<Kiadasok>
+			<Marketing>1200000</Marketing>
+			<Otletek>1000000</Otletek>
+			<Teszteles>500000</Teszteles>
+		</Kiadasok>
+	</Termekek>
+
+	<Termekek VallalatiAzonosito="2">
+		<Fajtaja>
+			<Hell>1</Hell>
+		</Fajtaja>
+		<Bevetel>80000000</Bevetel>
+		<Kiadasok>
+			<Marketing>3200000</Marketing>
+			<Otletek>1200000</Otletek>
+			<Teszteles>700000</Teszteles>
+		</Kiadasok>
+	</Termekek>
+
+	<Termekek VallalatiAzonosito="3">
+		<Fajtaja>
+			<Egyeb>1</Egyeb>
+		</Fajtaja>
+		<Bevetel>7000000</Bevetel>
+		<Kiadasok>
+			<Marketing>700000</Marketing>
+			<Otletek>250000</Otletek>
+			<Teszteles>150000</Teszteles>
+		</Kiadasok>
+	</Termekek>
+
+
+	<!--Dolgozók-->
+	<Dolgozok ID="1" GyarAzonosito="1">
+		<Lakcim>
+			<UtcaHazszam>Kerek utca 7</UtcaHazszam>
+			<IrSzam>3533</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Lakcim>
+		<Beosztas>Gyártósoros</Beosztas>
+		<Nev>Nagy Ernő</Nev>
+		<Fizetes>250000</Fizetes>
+		<Telefonszam>06307687647</Telefonszam>
+		<Telefonszam>06508695857</Telefonszam>
+	</Dolgozok>
+
+	<Dolgozok ID="2" GyarAzonosito="3">
+		<Lakcim>
+			<UtcaHazszam>Kis utca 23</UtcaHazszam>
+			<IrSzam>3523</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Lakcim>
+		<Beosztas>Gyártósoros</Beosztas>
+		<Nev>Látó Lajos</Nev>
+		<Fizetes>245000</Fizetes>
+		<Telefonszam>06307661589</Telefonszam>
+	</Dolgozok>
+
+	<Dolgozok ID="3" GyarAzonosito="2">
+		<Lakcim>
+			<UtcaHazszam>Mester utca 2</UtcaHazszam>
+			<IrSzam>2092</IrSzam>
+			<Varos>Budakeszi</Varos>
+		</Lakcim>
+		<Beosztas>Takarító</Beosztas>
+		<Nev>Hangos Ernő</Nev>
+		<Fizetes>220000</Fizetes>
+		<Telefonszam>062096758956</Telefonszam>
+	</Dolgozok>
+
+
+	<!--AvalonPark-->
+	<AvalonPark Azonosito="1" VezID="1">
+		<Kiadasok>
+			<Marketing>1000000</Marketing>
+			<Karbantartas>2500000</Karbantartas>
+			<Merchandiseok>3300000</Merchandiseok>
+			<Egyeb>3000000</Egyeb>
+		</Kiadasok>
+		<Bevetel>60000000</Bevetel>
+		<Cime>Miskolc Iglói u. 15, 3519</Cime>
+	</AvalonPark>
+
+
+
+	<!--Vezető-->
+	<Vezeto VezID="1">
+		<Lakcim>
+			<UtcaHazszam>Leveles utca 12</UtcaHazszam>
+			<IrSzam>3520</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Lakcim>
+		<Nev>Lázár Ervin</Nev>
+	</Vezeto>
+
+
+
+	<!--Kiszállítás-->
+	<Kiszallitas GyarAzonosito="1" MegrendeloAzonosito="1">
+		<Mennyiseg>2500</Mennyiseg>
+	</Kiszallitas>
+
+	<Kiszallitas GyarAzonosito="2" MegrendeloAzonosito="2">
+		<Mennyiseg>5000</Mennyiseg>
+	</Kiszallitas>
+	
+	<Kiszallitas GyarAzonosito="3" MegrendeloAzonosito="3">
+		<Mennyiseg>1200</Mennyiseg>
+	</Kiszallitas>
+
+
+	<!--Megrendelők-->
+	<Megrendelok MegrendeloAzonosito="1">
+		<Elerhetoseg>
+			<Email>ugyfelszolgalat@coop.hu</Email>
+			<TelefonSzam>06307658799</TelefonSzam>
+		</Elerhetoseg>
+		<Cime>
+			<UtcaHazszam>Corvin utca 7</UtcaHazszam>
+			<IrSzam>3525</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Cime>
+	</Megrendelok>
+
+	<Megrendelok MegrendeloAzonosito="2">
+		<Elerhetoseg>
+			<Email>beszerzes@spar.hu</Email>
+			<TelefonSzam>06407658788</TelefonSzam>
+		</Elerhetoseg>
+		<Cime>
+			<UtcaHazszam>Magas út 26</UtcaHazszam>
+			<IrSzam>3533</IrSzam>
+			<Varos>Miskolc</Varos>
+		</Cime>
+	</Megrendelok>
+
+	<Megrendelok MegrendeloAzonosito="3">
+		<Elerhetoseg>
+			<Email>megrendelo@arena.hu</Email>
+			<TelefonSzam>06105758595</TelefonSzam>
+		</Elerhetoseg>
+		<Cime>
+			<UtcaHazszam>Kerepesi út 9</UtcaHazszam>
+			<IrSzam>1087</IrSzam>
+			<Varos>Budapest</Varos>
+		</Cime>
+	</Megrendelok>
+	
+</C7H5VB_Hell>
