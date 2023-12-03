@@ -26,9 +26,12 @@ public class DomReadC7h5vb {
     }
 
     private static void printNode(Node node, String indent) {
+        // Ellenőrizzük, hogy az aktuális csomópont elem típusú-e
         if (node.getNodeType() == Node.ELEMENT_NODE) {
+            // Az elem nevének és értékének kiíratása
             System.out.println(indent + "Elem: " + node.getNodeName());
 
+            // Az elem attribútumainak kiíratása
             if (node.hasAttributes()) {
                 NamedNodeMap attributes = node.getAttributes();
                 for (int i = 0; i < attributes.getLength(); i++) {
@@ -37,6 +40,7 @@ public class DomReadC7h5vb {
                 }
             }
 
+            // Ha az elemnek vannak gyermekcsomópontjai bejárjuk őket
             if (node.hasChildNodes()) {
                 NodeList children = node.getChildNodes();
                 for (int i = 0; i < children.getLength(); i++) {
@@ -45,6 +49,7 @@ public class DomReadC7h5vb {
                 }
             }
         } else if (node.getNodeType() == Node.TEXT_NODE) {
+            // Szöveges tartalom kiírása
             String textContent = node.getNodeValue().trim();
             if (!textContent.isEmpty()) {
                 System.out.println(indent + "Tartalom: " + textContent);
