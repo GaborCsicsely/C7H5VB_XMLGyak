@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+	<!-- Győkérelem definiálása -->
 	<xs:element name="C7H5VB_Hell">
 		<xs:complexType>
 			<xs:sequence>
@@ -14,6 +15,7 @@
 			</xs:sequence>
 		</xs:complexType>
 
+		<!-- PK és FK létrehozása -->
 		<xs:key name="GyarAzonosito">
 			<xs:selector xpath="Gyarak"/>
 			<xs:field xpath="@GyarAzonosito"/>
@@ -69,7 +71,7 @@
 	</xs:element>
 
 
-
+	<!-- C7H5VB_Hell Gyermek elemei definiálása -->
 	<xs:element name="Gyarak">
 		<xs:complexType>
 			<xs:sequence>
@@ -149,6 +151,8 @@
 		</xs:complexType>
 	</xs:element>
 
+
+	<!-- Komplex típusok definiálása -->
 	<xs:complexType name="GyarakCimeType">
 		<xs:sequence>
 			<xs:element name="UtcaHazszam" type="xs:string"/>
@@ -197,6 +201,7 @@
 		</xs:sequence>
 	</xs:complexType>
 
+	<!-- Egyszerű típus definiálása -->
 	<xs:simpleType name="penzosszeg">
 		<xs:restriction base="xs:integer"/>
 	</xs:simpleType>
