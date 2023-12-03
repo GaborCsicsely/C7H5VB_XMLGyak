@@ -26,8 +26,8 @@ public class DomModifyC7h5vb {
             // Vezető nevének módosítása
             modifyLeaderName(document, "Nagy Ervin");
 
-            // Új e-mail cím hozzáadása a dolgozókhoz
-            addEmailToWorkers(document, "test@test.com");
+            // Gyártási ráták növelése
+            increaseManufacturingRate(document, 100);
 
             // Eltávolítja az első megrendelőt
             removeFirstCustomer(document);
@@ -76,15 +76,15 @@ public class DomModifyC7h5vb {
         }
     }
 
-    private static void addEmailToWorkers(Document doc, String email) {
-    NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
-    for (int i = 0; i < dolgozok.getLength(); i++) {
-        Element dolgozo = (Element) dolgozok.item(i);
-        Element emailElem = doc.createElement("Email");
-        emailElem.setTextContent(email);
-        dolgozo.appendChild(emailElem);
+    private static void increaseManufacturingRate(Document doc, int increaseBy) {
+    NodeList gyarak = doc.getElementsByTagName("Gyarak");
+        for (int i = 0; i < gyarak.getLength(); i++) {
+            Element gyar = (Element) gyarak.item(i);
+            String currentRate = gyar.getAttribute("GyartasiRata");
+            int newRate = Integer.parseInt(currentRate) + increaseBy;
+            gyar.setAttribute("GyartasiRata", Integer.toString(newRate));
+        }
     }
-}
 
 private static void removeFirstCustomer(Document doc) {
     NodeList megrendelok = doc.getElementsByTagName("Megrendelok");
