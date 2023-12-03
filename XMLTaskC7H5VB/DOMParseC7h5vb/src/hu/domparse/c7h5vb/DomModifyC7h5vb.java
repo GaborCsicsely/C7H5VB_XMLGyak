@@ -26,10 +26,17 @@ public class DomModifyC7h5vb {
             // Vezető nevének módosítása
             modifyLeaderName(document, "Nagy Ervin");
 
+            // Új e-mail cím hozzáadása a dolgozókhoz
+            addEmailToWorkers(document, "test@test.com");
+
+            // Eltávolítja az első megrendelőt
+            removeFirstCustomer(document);
+
             // Gyártósoros dolgozók fizetésének emelése
             increaseSalary(document, 1500);
 
-         // Fájlba írás és konzolra írás
+
+            // Fájlba írás és konzolra írás
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -68,6 +75,24 @@ public class DomModifyC7h5vb {
             vezeto.getElementsByTagName("Nev").item(0).setTextContent(newName);
         }
     }
+
+    private static void addEmailToWorkers(Document doc, String email) {
+    NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
+    for (int i = 0; i < dolgozok.getLength(); i++) {
+        Element dolgozo = (Element) dolgozok.item(i);
+        Element emailElem = doc.createElement("Email");
+        emailElem.setTextContent(email);
+        dolgozo.appendChild(emailElem);
+    }
+}
+
+private static void removeFirstCustomer(Document doc) {
+    NodeList megrendelok = doc.getElementsByTagName("Megrendelok");
+    if (megrendelok.getLength() > 0) {
+        Node firstCustomer = megrendelok.item(0);
+        firstCustomer.getParentNode().removeChild(firstCustomer);
+    }
+}
 
     private static void increaseSalary(Document doc, int amount) {
         NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
