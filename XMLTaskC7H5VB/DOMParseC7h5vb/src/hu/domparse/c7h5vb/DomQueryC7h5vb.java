@@ -26,6 +26,13 @@ public class DomQueryC7h5vb {
             for (String cim : cimek) {
                 System.out.println(cim);
             }
+            System.out.println("\nDolgozók fizetéseinek összege:");
+            int osszFizetes = getOsszFizetes(doc);
+            System.out.println("Összesített fizetés: " + osszFizetes);
+
+            System.out.println("\n'Gyártósoros' beosztásban dolgozók összfizetése:");
+            int osszFizetesGyartosoros = getOsszFizetesGyartosoros(doc);
+            System.out.println("Gyártósoros dolgozók összfizetése: " + osszFizetesGyartosoros);
 
             System.out.println("\nÖsszetett lekérdezés eredménye:");
             List<String> osszetettLekerdezesEredmeny = osszetettLekerdezes(doc);
@@ -82,6 +89,31 @@ public class DomQueryC7h5vb {
             }
         }
         return eredmeny;
+    }
+    
+    private static int getOsszFizetes(Document doc) {
+        int osszeg = 0;
+        NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
+        for (int i = 0; i < dolgozok.getLength(); i++) {
+            Element dolgozo = (Element) dolgozok.item(i);
+            int fizetes = Integer.parseInt(dolgozo.getElementsByTagName("Fizetes").item(0).getTextContent());
+            osszeg += fizetes;
+        }
+        return osszeg;
+    }
+
+    private static int getOsszFizetesGyartosoros(Document doc) {
+        int osszeg = 0;
+        NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
+        for (int i = 0; i < dolgozok.getLength(); i++) {
+            Element dolgozo = (Element) dolgozok.item(i);
+            String beosztas = dolgozo.getElementsByTagName("Beosztas").item(0).getTextContent();
+            if ("Gyártósoros".equals(beosztas)) {
+                int fizetes = Integer.parseInt(dolgozo.getElementsByTagName("Fizetes").item(0).getTextContent());
+                osszeg += fizetes;
+            }
+        }
+        return osszeg;
     }
 
     private static String getCim(NodeList elements, String azonosito) {
