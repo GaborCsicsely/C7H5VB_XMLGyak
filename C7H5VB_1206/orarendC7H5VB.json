@@ -1,0 +1,174 @@
+{
+  "XY_orarend": {
+    "ora": [
+      {
+        "id": "1",
+        "targy": "Szoftvertesztelés",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "In/103",
+        "oktato": "Hornyák Olivér",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "2",
+        "targy": "Szoftvertesztelés",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "In/103",
+        "oktato": "Hornyák Olivér",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "3",
+        "targy": "WEB technológiák",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "14:00",
+          "ig": "16:00"
+        },
+        "helyszin": "XXX A1 III. em. 305",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "4",
+        "targy": "WEB technológiák",
+        "idopont": {
+          "nap": "Hétfő",
+          "tol": "16:00",
+          "ig": "18:00"
+        },
+        "helyszin": "In/103",
+        "oktato": "Agárdi Anita",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "5",
+        "targy": "Mesterséges intelligencia",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "XXXII A1 mfsz.",
+        "oktato": "Tamás Judit",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "6",
+        "targy": "Adatkezelés XML-ben",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "XXXII A1 mfsz.",
+        "oktato": "Bednarik László",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "7",
+        "targy": "WEB-es alkalmazások",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "14:00",
+          "ig": "16:00"
+        },
+        "helyszin": "In/101",
+        "oktato": "Árvai László Lajos",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "8",
+        "targy": "WEB-es alkalmazások",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "16:00",
+          "ig": "18:00"
+        },
+        "helyszin": "In/101",
+        "oktato": "Mileff Péter",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "9",
+        "targy": "Hálózatok",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "8:00",
+          "ig": "10:00"
+        },
+        "helyszin": "II A2 mfsz.",
+        "oktato": "Kovács Szilveszter",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "10",
+        "targy": "Adatkezelés XML-ben",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "In/101",
+        "oktato": "Bednarik László",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "11",
+        "targy": "Integrált vállalati rendszerek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "X A1 II. em. 218",
+        "oktato": "Samad Dadvandipour",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "12",
+        "targy": "Integrált vállalati rendszerek",
+        "idopont": {
+          "nap": "Szerda",
+          "tol": "14:00",
+          "ig": "16:00"
+        },
+        "helyszin": "In/15",
+        "oktato": "Forrai Mónika",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "13",
+        "targy": "Mesterséges intelligencia",
+        "idopont": {
+          "nap": "Csütörtök",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "I. A2 fsz.",
+        "oktato": "Fazekas Levente",
+        "szak": "Mérnökinformatika"
+      },
+      {
+        "id": "14",
+        "targy": "Hálózatok",
+        "idopont": {
+          "nap": "Csütörtök",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "II A2 mfsz.",
+        "oktato": "Kovács Szilveszter",
+        "szak": "Mérnökinformatika"
+      }
+    ]
+  }
+}

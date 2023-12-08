@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Órarend JSON Feldolgozás</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('orarendC7H5VB.json')
+                .then(response => response.json())
+                .then(data => {
+                    const orarend = data['XY_orarend']['ora'];
+                    let output = '';
+
+                    orarend.forEach(ora => {
+                        output += `Óra ID: ${ora.id}<br>`;
+                        output += `Tárgy: ${ora.targy}<br>`;
+                        output += `Oktató: ${ora.oktato}<br>`;
+                        output += `Helyszín: ${ora.helyszin}<br>`;
+                        output += `Szak: ${ora.szak}<br>`;
+                        output += `Nap: ${ora.idopont.nap}<br>`;
+                        output += `Időpont -tól: ${ora.idopont.tol}<br>`;
+                        output += `Időpont -ig: ${ora.idopont.ig}<br>`;
+                        output += `<hr>`;
+                    });
+
+                    document.getElementById('output').innerHTML = output;
+                })
+                .catch(error => console.error('Hiba a JSON betöltésekor:', error));
+        });
+    </script>
+</head>
+<body>
+    <h1>Órarend Feldolgozás</h1>
+    <div id="output"></div>
+</body>
+</html>
