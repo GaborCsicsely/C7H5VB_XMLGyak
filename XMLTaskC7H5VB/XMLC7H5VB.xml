@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<C7H5VB_Hell>
+<C7H5VB_Hell xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaC7H5VB.xsd">
 
 	<!--Gyárak-->
 	<Gyarak GyarAzonosito="1" VallalatiAzonosito="1">
