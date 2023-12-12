@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<!-- Győkérelem definiálása -->
@@ -67,6 +67,12 @@
 			<xs:selector xpath="Megrendelok"/>
 			<xs:field xpath="@MegrendeloAzonosito"/>
 		</xs:key>
+
+		<!--Egy-egy kapcsolat megvalósítás-->
+		<xs:unique name="AvalonPark-Vezeto_egy_egy">
+			<xs:selector xpath="AvalonPark"></xs:selector>
+			<xs:field xpath="@VezID"></xs:field>
+		</xs:unique>
 
 	</xs:element>
 
