@@ -21,13 +21,13 @@ public class DomModifyC7h5vb {
             Document document = builder.parse("XMLC7H5VB.xml");
 
             // Dolgozóhoz telefonszám hozzáadása
-            addPhoneNumber(document, 2, "06101234567");
+            addPhoneNumber(document, 1, "06101234567");
 
             // Vezető nevének módosítása
             modifyLeaderName(document, "Nagy Ervin");
 
-            // Gyártási ráták növelése
-            increaseManufacturingRate(document, 100);
+            // Avalon Park bevétel növelése
+            increaseAvalonParkBevetel(document, 10000);
 
             // Eltávolítja az első megrendelőt
             removeFirstCustomer(document);
@@ -76,23 +76,28 @@ public class DomModifyC7h5vb {
         }
     }
 
-    private static void increaseManufacturingRate(Document doc, int increaseBy) {
-    NodeList gyarak = doc.getElementsByTagName("Gyarak");
-        for (int i = 0; i < gyarak.getLength(); i++) {
-            Element gyar = (Element) gyarak.item(i);
-            String currentRate = gyar.getAttribute("GyartasiRata");
-            int newRate = Integer.parseInt(currentRate) + increaseBy;
-            gyar.setAttribute("GyartasiRata", Integer.toString(newRate));
+    private static void increaseAvalonParkBevetel(Document doc, int increaseAmount) {
+        NodeList avalonParks = doc.getElementsByTagName("AvalonPark");
+        for (int i = 0; i < avalonParks.getLength(); i++) {
+            Element avalonPark = (Element) avalonParks.item(i);
+            Element bevetelElem = (Element) avalonPark.getElementsByTagName("Bevetel").item(0);
+            try {
+                int currentRevenue = Integer.parseInt(bevetelElem.getTextContent());
+                int newRevenue = currentRevenue + increaseAmount;
+                bevetelElem.setTextContent(Integer.toString(newRevenue));
+            } catch (NumberFormatException e) {
+                System.err.println("Nem sikerült az érték növelése a 'Bevetel' elemnél: " + bevetelElem.getTextContent());
+            }
         }
     }
 
-private static void removeFirstCustomer(Document doc) {
-    NodeList megrendelok = doc.getElementsByTagName("Megrendelok");
-    if (megrendelok.getLength() > 0) {
-        Node firstCustomer = megrendelok.item(0);
-        firstCustomer.getParentNode().removeChild(firstCustomer);
-    }
-}
+	private static void removeFirstCustomer(Document doc) {
+	    NodeList megrendelok = doc.getElementsByTagName("Megrendelok");
+	    if (megrendelok.getLength() > 0) {
+	        Node firstCustomer = megrendelok.item(0);
+	        firstCustomer.getParentNode().removeChild(firstCustomer);
+	    }
+	}
 
     private static void increaseSalary(Document doc, int amount) {
         NodeList dolgozok = doc.getElementsByTagName("Dolgozok");
